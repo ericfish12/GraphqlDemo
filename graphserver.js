@@ -6,7 +6,7 @@ const schema = buildSchema(`
 type Account{
 name:String
 age:Int
-sex:String
+gender:String
 department:String
 }
 type Query {
