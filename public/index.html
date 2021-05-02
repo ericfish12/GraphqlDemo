@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <button onclick = "getData()"> GET DATA</button>
-    <p id= 'account'><p>
-</body>
-<script>
-
-
-    function getData(){
-const query = `
+  </head>
+  <body>
+    <button onclick="getData()">GET DATA</button>
+  </body>
+  <script>
+    function getData() {
+      const query = `
 query Account ($username: String){
     account(username:$username){
 
@@ -26,22 +23,24 @@ query Account ($username: String){
     }
 }
 
- `
-const variables = {username:'Jhon Doe'}
-fetch('/graphql',{
-    method:"POST",
-    headers:{
-        'Content-Type':'application/json',
-        'Accept':'application/json'
-    },
-    body:JSON.stringify({
-        query:query,
-        variables:variables
-    })
+ `;
+      const variables = { username: "Jhon Doe" };
 
-}).then(res=>res.json()).then(data=>{console.log(data)
-
-})
-}
-</script>
+      fetch("/graphql", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          query: query,
+          variables: variables,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+    }
+  </script>
 </html>

@@ -1,0 +1,31 @@
+{
+  "name": "graphqldemo",
+  "version": "1.0.0",
+  "description": "npm i",
+  "main": "graphserver.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "mongoose": "^5.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericfish12/GraphqlDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericfish12/GraphqlDemo/issues"
+  },
+  "homepage": "https://github.com/ericfish12/GraphqlDemo#readme"
+}
